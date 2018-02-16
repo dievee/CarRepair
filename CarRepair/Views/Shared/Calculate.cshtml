@@ -1,0 +1,9 @@
+﻿
+@{
+    ViewBag.Title = "Result";
+}
+<br />
+<p>Общее состояние машины: @ViewBag.carCondition % </p>
+<p>К оплате @ViewBag.repairCost грн</p>
+
+@Html.ActionLink("Рассчитать стоимость ремонта еще одной машины", "Index", "Home")

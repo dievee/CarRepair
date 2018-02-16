@@ -1,0 +1,64 @@
+﻿@model CarRepair.Models.Truck
+
+@using (Html.BeginForm("Calculate", "Truck", FormMethod.Post))
+{
+        <label>
+            @Html.DisplayNameFor(m => m.Body)
+        </label>
+
+        @Html.TextBoxFor(m => m.Body, new { @type = "range", @min = "0", @max = "100", @Value = "100", @onchange = "document.getElementById('body').innerHTML = this.value;" })
+        <span id="body">100</span>
+        <br />
+
+        <label>
+            @Html.DisplayNameFor(m => m.Wheels)
+        </label>
+
+        @Html.TextBoxFor(m => m.Wheels, new { @type = "range", @min = "0", @max = "100", @Value = "100", @onchange = "document.getElementById('wheels').innerHTML = this.value;" })
+        <span id="wheels">100</span>
+        <br />
+
+        <label>
+            @Html.DisplayNameFor(m => m.Engine)
+        </label>
+
+        @Html.TextBoxFor(m => m.Engine, new { @type = "range", @min = "0", @max = "100", @Value = "100", @onchange = "document.getElementById('engine').innerHTML = this.value;" })
+        <span id="engine">100</span>
+        <br />
+
+        <label>
+            @Html.DisplayNameFor(m => m.Brake)
+        </label>
+
+        @Html.TextBoxFor(m => m.Brake, new { @type = "range", @min = "0", @max = "100", @Value = "100", @onchange = "document.getElementById('brake').innerHTML = this.value;" })
+        <span id="brake">100</span>
+        <br />
+
+        <label>
+            @Html.DisplayNameFor(m => m.Undercarriage)
+        </label>
+
+        @Html.TextBoxFor(m => m.Undercarriage, new { @type = "range", @min = "0", @max = "100", @Value = "100", @onchange = "document.getElementById('undercarriage').innerHTML = this.value;" })
+        <span id="undercarriage">100</span>
+        <br />
+
+        <label>
+            @Html.DisplayNameFor(m => m.Interior)
+        </label>
+
+        @Html.TextBoxFor(m => m.Interior, new { @type = "range", @min = "0", @max = "100", @Value = "100", @onchange = "document.getElementById('interior').innerHTML = this.value;" })
+        <span id="interior">100</span>
+        <br />
+
+        <label>
+            @Html.DisplayNameFor(m => m.Hydraulic)
+        </label>
+
+        @Html.TextBoxFor(m => m.Hydraulic, new { @type = "range", @min = "0", @max = "100", @Value = "100", @onchange = "document.getElementById('hydraulic').innerHTML = this.value;" })
+        <span id="hydraulic">100</span>
+        <br />
+
+        <p><input type="submit" class="btn btn-default" value="Узнать стоимость ремонта" /></p>
+
+}
+

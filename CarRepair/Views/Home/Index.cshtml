@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<br />
+<p>Выберите тип вашей машины</p>
+<div id="type">
+    <label>
+        <input type="radio" name="radio" onclick="$('#carCondition').load('@Url.Action("Repair", "Bus")')" />Автобус
+    </label>
+    <label>
+        <input type="radio" name="radio" onclick="$('#carCondition').load('@Url.Action("Repair", "Truck")')" />Грузовик
+    </label>
+    <label>
+        <input type="radio" name="radio" onclick="$('#carCondition').load('@Url.Action("Repair", "Vehicle")')" />Легковая
+    </label>
+</div>
+<div id="carCondition">
+
+</div>
